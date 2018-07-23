@@ -3,4 +3,19 @@ layout: default
 ---
 
 
-<h2>Esto es escrito en index.html</h2>
+{% for post in site.post %}
+
+<div>
+
+<h2>{{ post.title }}</h2>
+
+<p>{{ post.excert }} </p>
+
+<a href="{{ post.url | prepend : site.base.url }}">
+
+	Leer más
+
+</a>
+</div>
+
+{% endfor%}
